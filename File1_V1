@@ -3,3 +3,6 @@ projectx
 select count(1) from table-a ;
 create table xyz nologging as
 select a.* from table a, table b where a.id = b.id ;
+select country, count(1) from xyz
+group by country having count(1) > 2 ;
+
